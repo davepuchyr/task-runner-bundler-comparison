@@ -26,7 +26,8 @@ module.exports = {
       'quotes': 0,
       'semi': [1, 'always'],
       'no-unused-vars': 1,
-      'react/prop-types': 1
+      'react/prop-types': 1,
+      'eol-last': 2 // always
    },
    'settings': {
       'import/resolver': {
