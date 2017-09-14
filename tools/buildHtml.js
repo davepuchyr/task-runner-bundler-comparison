@@ -5,9 +5,9 @@ const colors = require('colors');
 const PROD = process.env.NODE_ENV === 'production';
 const baseDir = PROD ? 'build' : 'dist';
 
-fs.readFile('app/index.html', 'utf8', (err, markup) => {
+fs.readFile('client/index.html', 'utf8', (err, markup) => {
   const loadMarkup = cheerio.load(markup);
-  
+
   if (err) {
     return console.log(err);
   }

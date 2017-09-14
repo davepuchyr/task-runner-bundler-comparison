@@ -11,10 +11,10 @@ module.exports = {
   debug: true,
   devtool: PROD ? 'source-map' : 'eval-source-map',
   noInfo: false,
-  entry: PROD ? './app/index' :
+  entry: PROD ? './client/index' :
   [
     'webpack-hot-middleware/client?reload=true', // reloads the page if hot module reloading fails.
-    './app/index'
+    './client/index'
   ],
   target: 'web',
   output: {
@@ -23,7 +23,7 @@ module.exports = {
     filename: 'bundle.js'
   },
   devServer: {
-    contentBase: PROD ? './build' : './app'
+    contentBase: PROD ? './build' : './client'
   },
   plugins: PROD ?
   [
@@ -39,7 +39,7 @@ module.exports = {
   ],
   module: {
     loaders: [
-      {test: /\.js$/, include: path.join(__dirname, 'app'), loaders: ['babel']},
+      {test: /\.js$/, include: path.join(__dirname, 'client'), loaders: ['babel']},
       {
         test: /\.css$/,
         loader: PROD ?
@@ -48,7 +48,7 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        loader: PROD ? 
+        loader: PROD ?
           ExtractTextPlugin.extract('style', 'css?sourceMap!resolve-url!sass?sourceMap') :
           'style!css?sourceMap!resolve-url!sass?sourceMap'
       },
@@ -57,9 +57,9 @@ module.exports = {
     ]
   },
   sassLoader: {
-    includePaths: [path.resolve('./app')]
+    includePaths: [path.resolve('./client')]
   },
   resolve: {
-    root: [path.resolve('./app')]
+    root: [path.resolve('./client')]
   }
 };
