@@ -12,7 +12,6 @@
     "test": "npm-run-all test:client test:server",
     "test:client": "cross-env NODE_PATH=./client mocha ./client/**/*.test.js --compilers js:babel-core/register",
     "test:server": "cross-env NODE_PATH=./server mocha ./server/**/*.test.js --compilers js:babel-core/register",
-    "test:watch": "npm run test -- --watch",
     "lint": "esw --color ./client/**/*.js ./server/**/*.js",
     "lint:watch": "npm run lint -- --watch",
     "server": "nodemon server/server.js",
