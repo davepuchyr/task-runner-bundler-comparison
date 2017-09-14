@@ -1,0 +1,20 @@
+{
+   "tags": {
+      "allowUnknownTags": false
+   },
+   "sourceType": "module",
+   "source": {
+      "exclude": [ "node_modules" ],
+      "includePattern": ".+\\.js(doc|x)?$",
+      "excludePattern": "(^|\\/|\\\\)_"
+   },
+   "opts": {
+      "access": "all",
+      "encoding": "utf8",
+      "destination": "doc",
+      "readme": "README.md",
+      "recurse": true,
+      "template": "node_modules/jsdoc-template-argon",
+      "verbose": true
+  }
+}

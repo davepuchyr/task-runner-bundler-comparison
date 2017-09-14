@@ -22,8 +22,10 @@
     "postbuild": "npm run server",
     "prebuild:prod": "npm-run-all clean-build build-html:prod",
     "build:prod": "cross-env NODE_ENV=production webpack",
-    "postbuild:prod": "npm run server:prod"
-  },
+    "postbuild:prod": "npm run server:prod",
+    "doc:client": "jsdoc client --configure ./jsdoc.json --destination doc/client",
+    "doc:server": "jsdoc server --configure ./jsdoc.json --destination doc/server"
+   },
   "keywords": [],
   "author": "",
   "license": "ISC",
