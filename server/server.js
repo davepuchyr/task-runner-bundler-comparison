@@ -1,6 +1,6 @@
 // Imports
 const compression = require('compression');
-const config = require('./webpack.config');
+const config = require('../webpack.config');
 const express = require('express');
 const open = require('open');
 const path = require('path');
@@ -11,7 +11,7 @@ const app = express();
 const compiler = webpack(config);
 const PROD = process.env.NODE_ENV === 'production';
 const port = PROD ? 8080: 3000;
-const baseDir = PROD ? 'build' : 'dist';
+const baseDir = path.join( __dirname, '..', ( PROD ? 'build' : 'dist' ) );
 
 // Middleware
 if (PROD) {
