@@ -9,6 +9,6 @@ export default class Derived extends Base {
     * @param {object} o args
     */
    hello( o = { audience:'World' } ) {
-      return `Hello, ${o.audience}, from ${Derived}!`;
+      return `Hello, ${o.audience}, from Derived!`;
    }
 }
