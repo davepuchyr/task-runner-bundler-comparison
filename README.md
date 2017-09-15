@@ -1,8 +1,12 @@
+
+Source: https://www.toptal.com/front-end/webpack-browserify-gulp-which-is-better
+
 This repository compares three different task runner / bundler combinations:
 
 - Gulp + Browserify
 - Gulp + Webpack
-- Webpack + npm scripts [Current Branch]
+- Webpack + npm scripts
+- Webpack + npm scripts + client & server + vscode launch.json
 
 The repository consists of three different branches, each of which have near-identical code for a sample web app but differ in their task running and bundling approaches.
 
